@@ -32,21 +32,29 @@ offset_right = 200.0
 offset_bottom = -8.0
 grow_vertical = 0
 
-[node name="WoodLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+[node name="WoodLabel" type="RichTextLabel" parent="UI/HUD/ResourcePanel"]
 layout_mode = 2
+bbcode_enabled = true
 text = "Wood: 0"
+fit_content = true
 
-[node name="ClayLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+[node name="ClayLabel" type="RichTextLabel" parent="UI/HUD/ResourcePanel"]
 layout_mode = 2
+bbcode_enabled = true
 text = "Clay: 0"
+fit_content = true
 
-[node name="IronLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+[node name="IronLabel" type="RichTextLabel" parent="UI/HUD/ResourcePanel"]
 layout_mode = 2
+bbcode_enabled = true
 text = "Iron: 0"
+fit_content = true
 
-[node name="PopulationLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+[node name="PopulationLabel" type="RichTextLabel" parent="UI/HUD/ResourcePanel"]
 layout_mode = 2
+bbcode_enabled = true
 text = "Population: 1"
+fit_content = true
 
 [node name="MenuButtons" type="HBoxContainer" parent="UI/HUD"]
 layout_mode = 1

@@ -61,6 +61,7 @@ layout_mode = 2
 [node name="RequirementsHeader" type="RichTextLabel" parent="Panel/VBoxContainer/HeaderRow"]
 layout_mode = 2
 size_flags_horizontal = 3
+bbcode_enabled = true
 text = "Requirements"
 fit_content = true
 
@@ -70,6 +71,7 @@ layout_mode = 2
 [node name="ActionHeader" type="RichTextLabel" parent="Panel/VBoxContainer/HeaderRow"]
 layout_mode = 2
 size_flags_horizontal = 3
+bbcode_enabled = true
 text = "Action"
 fit_content = true
 
@@ -90,51 +92,59 @@ layout_mode = 2
 [node name="TownhallName" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
 layout_mode = 2
 size_flags_horizontal = 3
+bbcode_enabled = true
 text = "Townhall"
 fit_content = true
 
 [node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
 layout_mode = 2
 
-[node name="TownhallWood" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+[node name="WoodSection" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="WoodAmount" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow/WoodSection"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "[wood] 100"
+bbcode_enabled = true
+text = "[wood] 100 "
+fit_content = true
+
+[node name="ClaySection" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="WoodAmount" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow/ClaySection"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[wood] 100 "
+fit_content = true
+
+[node name="IronSection" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="IronAmount" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow/IronSection"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[wood] 100 "
+fit_content = true
+
+[node name="PopulationSection" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="PopulationAmount" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow/PopulationSection"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[wood] 100 "
 fit_content = true
 
 [node name="VSeparator2" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
 layout_mode = 2
 
-[node name="TownhallClay" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "[clay] 0"
-fit_content = true
-
-[node name="VSeparator3" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
-layout_mode = 2
-
-[node name="TownhallIron" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "[iron] 50"
-fit_content = true
-
-[node name="VSeparator4" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
-layout_mode = 2
-
-[node name="TownhallPopulation" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "[population] 0"
-fit_content = true
-
-[node name="VSeparator5" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
-layout_mode = 2
-
 [node name="TownhallButton" type="Button" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 3
 text = "Build"
 
 [node name="WarehouseRow" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer"]
@@ -143,49 +153,24 @@ layout_mode = 2
 [node name="WarehouseName" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
 layout_mode = 2
 size_flags_horizontal = 3
+bbcode_enabled = true
 text = "Warehouse"
 fit_content = true
 
 [node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
 layout_mode = 2
 
-[node name="WarehouseWood" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+[node name="WarehouseRequirements" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "[wood] 25"
+bbcode_enabled = true
+text = "[wood] 25  [clay] 0  [iron] 15  [population] 0"
 fit_content = true
 
 [node name="VSeparator2" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
 layout_mode = 2
 
-[node name="WarehouseClay" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "[clay] 0"
-fit_content = true
-
-[node name="VSeparator3" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
-layout_mode = 2
-
-[node name="WarehouseIron" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "[iron] 15"
-fit_content = true
-
-[node name="VSeparator4" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
-layout_mode = 2
-
-[node name="WarehousePopulation" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "[population] 0"
-fit_content = true
-
-[node name="VSeparator5" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
-layout_mode = 2
-
 [node name="WarehouseButton" type="Button" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 3
 text = "Build"

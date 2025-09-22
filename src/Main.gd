@@ -4,10 +4,10 @@
 var resource_manager
 
 # UI references
-@onready var wood_label: Label = $UI/HUD/ResourcePanel/WoodLabel
-@onready var clay_label: Label = $UI/HUD/ResourcePanel/ClayLabel  
-@onready var iron_label: Label = $UI/HUD/ResourcePanel/IronLabel
-@onready var population_label: Label = $UI/HUD/ResourcePanel/PopulationLabel
+@onready var wood_label: RichTextLabel = $UI/HUD/ResourcePanel/WoodLabel
+@onready var clay_label: RichTextLabel = $UI/HUD/ResourcePanel/ClayLabel  
+@onready var iron_label: RichTextLabel = $UI/HUD/ResourcePanel/IronLabel
+@onready var population_label: RichTextLabel = $UI/HUD/ResourcePanel/PopulationLabel
 
 # Gathering buttons
 @onready var wood_button: Button = $UI/GatheringArea/Wood
@@ -41,7 +41,7 @@ func _on_fish_pressed() -> void:
 func _on_resource_changed(_resource_type: String, _new_amount: int) -> void:
 	_update_resource_display()
 
-# Update all resource labels
+# Update all resource labels - ready for manual icon integration via editor
 func _update_resource_display() -> void:
 	wood_label.text = "Wood: " + str(resource_manager.get_wood())
 	clay_label.text = "Clay: " + str(resource_manager.get_clay())
