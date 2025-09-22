@@ -1,0 +1,116 @@
+[gd_scene load_steps=2 format=3 uid="uid://xkqh8x7g6q22"]
+
+[ext_resource type="Script" uid="uid://cyag4yytnvsjo" path="res://src/Main.gd" id="1_0bbpv"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0bbpv")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResourcePanel" type="VBoxContainer" parent="UI/HUD"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -100.0
+offset_right = 200.0
+offset_bottom = -8.0
+grow_vertical = 0
+
+[node name="WoodLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+layout_mode = 2
+text = "Wood: 0"
+
+[node name="ClayLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+layout_mode = 2
+text = "Clay: 0"
+
+[node name="IronLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+layout_mode = 2
+text = "Iron: 0"
+
+[node name="PopulationLabel" type="Label" parent="UI/HUD/ResourcePanel"]
+layout_mode = 2
+text = "Population: 1"
+
+[node name="MenuButtons" type="HBoxContainer" parent="UI/HUD"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="BuildingMenuButton" type="Button" parent="UI/HUD/MenuButtons"]
+layout_mode = 2
+text = "Buildings"
+
+[node name="GatheringArea" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Wood" type="Button" parent="UI/GatheringArea"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 100.0
+offset_right = 150.0
+offset_bottom = 130.0
+text = "Cut tree"
+
+[node name="Clay" type="Button" parent="UI/GatheringArea"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = 130.0
+text = "Dig clay"
+
+[node name="Iron" type="Button" parent="UI/GatheringArea"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 100.0
+offset_right = 450.0
+offset_bottom = 130.0
+text = "Mine iron"
+
+[node name="Fish" type="Button" parent="UI/GatheringArea"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 200.0
+offset_right = 225.0
+offset_bottom = 230.0
+text = "Feed folk"
+
+[connection signal="pressed" from="UI/HUD/MenuButtons/BuildingMenuButton" to="." method="_on_building_menu_button_pressed"]
+[connection signal="pressed" from="UI/GatheringArea/Wood" to="." method="_on_wood_pressed"]
+[connection signal="pressed" from="UI/GatheringArea/Clay" to="." method="_on_clay_pressed"]
+[connection signal="pressed" from="UI/GatheringArea/Iron" to="." method="_on_iron_pressed"]
+[connection signal="pressed" from="UI/GatheringArea/Fish" to="." method="_on_fish_pressed"]

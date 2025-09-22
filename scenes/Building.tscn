@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://din84lmkk726x"]
+
+[node name="Building" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleRow" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="Panel/VBoxContainer/TitleRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Building Menu"
+fit_content = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HeaderRow" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="NameHeader" type="RichTextLabel" parent="Panel/VBoxContainer/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Building"
+fit_content = true
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HeaderRow"]
+layout_mode = 2
+
+[node name="RequirementsHeader" type="RichTextLabel" parent="Panel/VBoxContainer/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Requirements"
+fit_content = true
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/VBoxContainer/HeaderRow"]
+layout_mode = 2
+
+[node name="ActionHeader" type="RichTextLabel" parent="Panel/VBoxContainer/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Action"
+fit_content = true
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BuildingsContainer" type="VBoxContainer" parent="Panel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TownhallRow" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer"]
+layout_mode = 2
+
+[node name="TownhallName" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Townhall"
+fit_content = true
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="TownhallWood" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[wood] 100"
+fit_content = true
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="TownhallClay" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[clay] 0"
+fit_content = true
+
+[node name="VSeparator3" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="TownhallIron" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[iron] 50"
+fit_content = true
+
+[node name="VSeparator4" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="TownhallPopulation" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[population] 0"
+fit_content = true
+
+[node name="VSeparator5" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+
+[node name="TownhallButton" type="Button" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/TownhallRow"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Build"
+
+[node name="WarehouseRow" type="HBoxContainer" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer"]
+layout_mode = 2
+
+[node name="WarehouseName" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Warehouse"
+fit_content = true
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+
+[node name="WarehouseWood" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[wood] 25"
+fit_content = true
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+
+[node name="WarehouseClay" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[clay] 0"
+fit_content = true
+
+[node name="VSeparator3" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+
+[node name="WarehouseIron" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[iron] 15"
+fit_content = true
+
+[node name="VSeparator4" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+
+[node name="WarehousePopulation" type="RichTextLabel" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[population] 0"
+fit_content = true
+
+[node name="VSeparator5" type="VSeparator" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+
+[node name="WarehouseButton" type="Button" parent="Panel/VBoxContainer/ScrollContainer/BuildingsContainer/WarehouseRow"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Build"
